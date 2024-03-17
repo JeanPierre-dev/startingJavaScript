@@ -1,2 +1,2 @@
 # startingJavaScript
-HelloWorld
+HelloWorld javascript

@@ -1,0 +1,25 @@
+/* Estilos CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+    animation: cambiaColor 3s infinite alternate; /* Se aplica la animación */
+}
+
+/* Definición de la animación */
+@keyframes cambiaColor {
+    0% {
+        color: #333; /* Color inicial */
+    }
+    50% {
+        color: #632386; /* Color en la mitad de la animación */
+    }
+    100% {
+        color: #448744; /* Color al final de la animación */
+    }
+}
