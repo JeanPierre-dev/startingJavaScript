@@ -1,6 +1,8 @@
 - Inicializar git en un proyecto
 git init
 
+-------------------
+
 - Login config:
 git config --global user.name = "Example User"
 git config --global user.email = "correo@ejemplo.com"
@@ -11,14 +13,32 @@ ssh-add ~/.ssh/<nombre de la llave privada>
 nano ~/.ssh/config (archivo sin extensión)
     CONTENIDO:
         # Configuración para la organización
-        Host laboral
-            HostName github.com
+        Host gitlab.efac.pe
+            HostName gitlab.efac.pe
             User git
-            IdentityFile ~/.ssh/chanchitoTrabajador
+            IdentityFile ~/.ssh/WorkKey
 
         # Configuración personal
-        Host personal
+        Host github.com
             HostName github.com
             User git
-            IdentityFile ~/.ssh/chachitoFeliz
-            
+            IdentityFile ~/.ssh/PersonalKey
+
+-------------------
+
+COMMIT AND PUSH:
+Seleccionar archivo a agregar al próximo commit:
+git add "ruta de archivo"
+
+Seleccionar todos los archivos a subir en el próximo commit:
+git add .
+
+Subir los cambios en una rama ya vinculada
+git push
+
+Enviar la rama actual al repositorio remoto
+git push <nombre_remoto> <nombre_rama>
+
+Enviar todas las ramas al repositorio remoto
+git push --all <nombre_remoto>
+
