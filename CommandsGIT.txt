@@ -1,0 +1,24 @@
+- Inicializar git en un proyecto
+git init
+
+- Login config:
+git config --global user.name = "Example User"
+git config --global user.email = "correo@ejemplo.com"
+
+- Login config (with SSH key):
+ssh-keygen -t rsa -b 4096 -C <tu@correo.com> -f ~/.ssh/<el_nombre_de_tu_key>
+ssh-add ~/.ssh/<nombre de la llave privada>
+nano ~/.ssh/config (archivo sin extensión)
+    CONTENIDO:
+        # Configuración para la organización
+        Host laboral
+            HostName github.com
+            User git
+            IdentityFile ~/.ssh/chanchitoTrabajador
+
+        # Configuración personal
+        Host personal
+            HostName github.com
+            User git
+            IdentityFile ~/.ssh/chachitoFeliz
+            
